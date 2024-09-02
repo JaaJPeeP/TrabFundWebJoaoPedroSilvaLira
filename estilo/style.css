@@ -1,0 +1,299 @@
+:root{
+    /* Define variáveis CSS para reutilização em todo o documento */
+    --bg-color: #003797;            /* Cor de fundo geral */
+    --header-color: #2372FA;        /* Cor de fundo do cabeçalho */
+    --title-color: #FAB523;         /* Cor dos títulos */
+    --text-color: #ffff;            /* Cor do texto */
+    --link-color: #FA9328;          /* Cor dos links */
+    --span-color: #ff7b00;          /* Cor de destaque para spans */
+    --box-shadow-color: #81afff;    /* Cor da sombra das caixas */
+}
+
+*{
+    /* Aplica a todos os elementos */
+    margin: 0px;                     /* Remove as margens padrão */
+    padding: 0px;                    /* Remove os preenchimentos padrão */
+    box-sizing: border-box;          /* Inclui bordas e padding no cálculo da largura e altura */
+    font-family: Arial, Helvetica, sans-serif; /* Define a família de fontes */
+    text-decoration: none;           /* Remove sublinhados de links */
+    list-style: none;                /* Remove marcadores de listas */
+}
+
+header{
+    /* Estilização do cabeçalho */
+    position: fixed;                 /* Fixa o cabeçalho no topo da página */
+    top: 0;                          /* Alinha o cabeçalho ao topo */
+    left: 0;                         /* Alinha o cabeçalho à esquerda */
+    width: 100%;                     /* Faz o cabeçalho ocupar toda a largura */
+    padding: 35px 12%;               /* Adiciona preenchimento no cabeçalho */
+    background: var(--header-color); /* Define a cor de fundo usando a variável */
+    display: flex;                   /* Exibe o conteúdo em uma linha flexível */
+    justify-content: space-between;  /* Distribui o conteúdo uniformemente */
+    align-items: center;             /* Alinha os itens verticalmente ao centro */
+    z-index: 100;                    /* Garante que o cabeçalho fique sobre outros elementos */
+}
+
+.logo{
+    /* Estiliza o link da logo */
+    color: var(--text-color);        /* Define a cor do texto da logo */
+}
+.logo:hover{
+    /* Estiliza a logo ao passar o mouse */
+    color: var(--link-color);        /* Muda a cor da logo ao passar o mouse */
+    text-shadow: 0 0 25px rgb(0, 19, 71); /* Adiciona sombra ao texto da logo */
+}
+
+.navbar ul{
+    /* Estiliza a lista de navegação */
+    font-size: 13px;                 /* Define o tamanho da fonte */
+    margin: 0 20px;                  /* Define a margem lateral */
+    display: flex;                   /* Exibe os itens em linha */
+    justify-content: flex-end;       /* Alinha os itens à direita */
+    gap: 30px;                       /* Define o espaçamento entre os itens */
+}
+.navbar a{
+    /* Estiliza os links de navegação */
+    color: var(--text-color);        /* Define a cor dos links */
+}
+.navbar a:hover{
+    /* Estiliza os links ao passar o mouse */
+    color: var(--link-color);        /* Muda a cor dos links ao passar o mouse */
+    text-shadow: 0 0 25px rgb(0, 19, 71); /* Adiciona sombra ao texto dos links */
+}
+
+.home{
+    /* Estiliza a seção "home" */
+    width: 100%;                     /* Ocupa toda a largura da tela */
+    height: 600px;                   /* Define a altura */
+    min-width: 100vh;                /* Garante que a seção ocupe pelo menos a altura da tela */
+    background: #003797;             /* Define a cor de fundo */
+    display: flex;                   /* Exibe o conteúdo em uma linha flexível */
+    align-items: center;             /* Alinha os itens verticalmente ao centro */
+    gap: 7em;                        /* Define o espaçamento entre os itens */
+    padding: 30px 12% 0;             /* Adiciona preenchimento ao topo */
+}
+
+.home-content{
+    /* Estiliza o conteúdo da seção "home" */
+    max-width: 800px;                /* Limita a largura máxima do conteúdo */
+}
+.home-content h2{
+    /* Estiliza o título na seção "home" */
+    color: #ffffff;                  /* Define a cor do título */
+    font-size: 40px;                 /* Define o tamanho da fonte */
+    font-weight: 600;                /* Define o peso da fonte */
+    margin: 25px 0 0;                /* Adiciona margem superior */
+}
+.home-content p{
+    /* Estiliza o parágrafo na seção "home" */
+    color: var(--text-color);        /* Define a cor do texto */
+    font-size: 15px;                 /* Define o tamanho da fonte */
+    margin: 30px 0 0;                /* Adiciona margem superior */
+}
+.home-content span{
+    /* Estiliza os elementos <span> */
+    color: var(--span-color);        /* Define a cor dos spans */
+}
+
+.img{
+    /* Estiliza a imagem na seção "home" */
+    border-radius: 70%;              /* Arredonda os cantos da imagem */
+    box-shadow: 0 0 25px var(--box-shadow-color); /* Adiciona sombra à imagem */
+}
+
+::-webkit-scrollbar{
+    /* Estiliza a barra de rolagem (Chrome, Safari) */
+    width: 10px;                     /* Define a largura da barra de rolagem */
+}
+::-webkit-scrollbar-thumb{
+    /* Estiliza o polegar da barra de rolagem (Chrome, Safari) */
+    background-color: var(--header-color); /* Define a cor do polegar */
+}
+::-webkit-scrollbar-track{
+    /* Estiliza o trilho da barra de rolagem (Chrome, Safari) */
+    background-color: rgba(0, 0, 0, 0.753); /* Define a cor do trilho */
+    width: 10px;                     /* Define a largura do trilho */
+}
+
+.formacao{
+    /* Estiliza a seção "formação" */
+    display: flex;                   /* Exibe o conteúdo em uma linha flexível */
+    justify-content: center;         /* Centraliza o conteúdo horizontalmente */
+    align-items: center;             /* Centraliza o conteúdo verticalmente */
+    padding: 10% 10% 8%;             /* Adiciona preenchimento ao redor da seção */
+    gap: 5em;                        /* Define o espaçamento entre os itens */
+    background: #001f53;             /* Define a cor de fundo */
+}
+
+.imgescola{
+    /* Estiliza a imagem na seção "formação" */
+    position: relative;              /* Define a posição relativa */
+    box-shadow: 0 0 25px var(--box-shadow-color); /* Adiciona sombra à imagem */
+    border-radius: 20px;             /* Arredonda os cantos da imagem */
+}
+
+.formacao-content{
+    /* Estiliza o conteúdo da seção "formação" */
+    text-align: left;                /* Alinha o texto à esquerda */
+}
+.formacao-content h2{
+    /* Estiliza o título na seção "formação" */
+    color: var(--text-color);        /* Define a cor do título */
+    font-size: 40px;                 /* Define o tamanho da fonte */
+    font-weight: 600;                /* Define o peso da fonte */
+    margin: 25px 0 0;                /* Adiciona margem superior */
+}
+.formacao-content p{
+    /* Estiliza o parágrafo na seção "formação" */
+    color: var(--text-color);        /* Define a cor do texto */
+    font-size: 15px;                 /* Define o tamanho da fonte */
+    margin: 30px 0 0;                /* Adiciona margem superior */
+}
+.formacao-content span{
+    /* Estiliza os elementos <span> na seção "formação" */
+    color: var(--span-color);        /* Define a cor dos spans */
+}
+
+.formacao2{
+    /* Estiliza a segunda seção "formação" */
+    display: flex;                   /* Exibe o conteúdo em uma linha flexível */
+    justify-content: center;         /* Centraliza o conteúdo horizontalmente */
+    align-items: center;             /* Centraliza o conteúdo verticalmente */
+    padding: 0% 10% 8%;              /* Adiciona preenchimento ao redor da seção */
+    gap: 5em;                        /* Define o espaçamento entre os itens */
+    background: #001f53;             /* Define a cor de fundo */
+}
+
+.img_linguas{
+    /* Estiliza a imagem na seção "formação2" */
+    position: relative;              /* Define a posição relativa */
+    box-shadow: 0 0 25px #ff8800;    /* Adiciona sombra à imagem */
+    border-radius: 20px;             /* Arredonda os cantos da imagem */
+}
+
+.formacao-content2{
+    /* Estiliza o conteúdo da segunda seção "formação" */
+    text-align: right;               /* Alinha o texto à direita */
+}
+.formacao-content2 p{
+    /* Estiliza o parágrafo na segunda seção "formação" */
+    color: var(--text-color);        /* Define a cor do texto */
+    font-size: 15px;                 /* Define o tamanho da fonte */
+    margin: 30px 0 0;                /* Adiciona margem superior */
+}
+
+.portfolio{
+    /* Estiliza a seção "portfólio" */
+    background: #000816;             /* Define a cor de fundo */
+    color: var(--text-color);        /* Define a cor do texto */
+    padding: 10% 10% 1%;             /* Adiciona preenchimento ao redor da seção */
+}
+
+.portfolio h2{
+    /* Estiliza o título na seção "portfólio" */
+    margin-bottom: 2rem;             /* Adiciona margem inferior */
+    color: var(--title-color);       /* Define a cor do título */
+}
+
+.port-container{
+    /* Estiliza o contêiner do portfólio */
+    display: grid;                   /* Exibe o conteúdo em um layout de grade */
+    grid-template-columns: repeat(1fr); /* Define uma única coluna na grade */
+    align-items: center;             /* Centraliza os itens verticalmente */
+    gap: 2.5rem;                     /* Define o espaçamento entre os itens */
+}
+
+.port-box{
+    /* Estiliza as caixas individuais no portfólio */
+    background-color: var(--bg-color); /* Define a cor de fundo */
+    color: black;                     /* Define a cor do texto */
+    height: 250px;                    /* Define a altura das caixas */
+    border-radius: 25px;              /* Arredonda os cantos das caixas */
+    cursor: pointer;                  /* Exibe o cursor como uma mão ao passar o mouse */
+}
+.port-box:hover{
+    /* Estiliza as caixas ao passar o mouse */
+    background: var(--header-color);  /* Muda a cor de fundo ao passar o mouse */
+    color: var(--text-color);         /* Muda a cor do texto ao passar o mouse */
+    transform: scale(1.03);           /* Aumenta ligeiramente o tamanho ao passar o mouse */
+}
+
+.port-box .port-info{
+    /* Estiliza o conteúdo informativo dentro das caixas do portfólio */
+    display: flex;                    /* Exibe o conteúdo em uma linha flexível */
+    flex-direction: column;           /* Organiza o conteúdo em uma coluna */
+    text-align: left;                 /* Alinha o texto à esquerda */
+    max-height: 200px;                /* Define a altura máxima */
+    justify-content: center;          /* Centraliza verticalmente o conteúdo */
+    align-items: baseline;            /* Alinha os itens ao início da linha de base */
+    padding: 5em;                     /* Adiciona preenchimento ao redor do conteúdo */
+}
+
+.port-box img{
+    /* Estiliza as imagens nas caixas do portfólio */
+    max-height: auto;                 /* Ajusta a altura máxima automaticamente */
+    display: flex;                    /* Exibe a imagem em um contêiner flexível */
+    margin: auto;                     /* Centraliza a imagem */
+    padding: 50px 0 10px;             /* Adiciona preenchimento ao redor da imagem */
+}
+.port-info p{
+    /* Estiliza os parágrafos nas caixas do portfólio */
+    font-size: 15px;                  /* Define o tamanho da fonte */
+    font-weight: 600;                 /* Define o peso da fonte */
+    max-height: 100px;                /* Define a altura máxima */
+    margin: auto;                     /* Centraliza o parágrafo */
+}
+
+.contato-form{
+    /* Estiliza a seção de formulário de contato */
+    padding: 8% 0 3%;                 /* Adiciona preenchimento ao redor da seção */
+    background-color: #a3c5ff;        /* Define a cor de fundo */
+}
+.contato-form form{
+    /* Estiliza o formulário */
+    max-width: 50em;                  /* Define a largura máxima */
+    margin: 1rem auto;                /* Centraliza o formulário */
+    text-align: center;               /* Centraliza o texto dentro do formulário */
+    margin-bottom: 3em;               /* Adiciona margem inferior */
+}
+.contato-form form .input-box{
+    /* Estiliza a caixa de entrada do formulário */
+    display: flex;                    /* Exibe os itens em uma linha flexível */
+    justify-content: center;          /* Centraliza os itens */
+    flex-wrap: wrap;                  /* Permite que os itens quebrem linha */
+}
+.btn-1:hover{
+    /* Estiliza o botão ao passar o mouse */
+    background: var(--link-color);    /* Muda a cor de fundo do botão */
+}
+
+.contato-form form .input-box input,
+.contato-form form textarea{
+    /* Estiliza os campos de entrada e textarea */
+    width: 100%;                      /* Define a largura completa */
+    padding: 1.5em;                   /* Adiciona preenchimento interno */
+    font: 15px;                       /* Define o tamanho da fonte */
+    color: black;                     /* Define a cor do texto */
+    border-radius: 10px;              /* Arredonda os cantos dos campos */
+    margin: 1rem 0;                   /* Adiciona margem vertical */
+    resize: none;                     /* Impede o redimensionamento do textarea */
+}
+.links{
+    /* Estiliza a seção de links */
+    padding: 0 10% 0;                 /* Adiciona preenchimento lateral */
+    gap: 5em;                         /* Define o espaçamento entre os itens */
+    display: flex;                    /* Exibe os links em uma linha flexível */
+    justify-content: flex-end;        /* Alinha os links à direita */
+}
+.links img:hover{
+    /* Estiliza as imagens de links ao passar o mouse */
+    box-shadow: 0 0 25px #001335;     /* Adiciona sombra às imagens */
+}
+
+footer{
+    /* Estiliza o rodapé */
+    background-color: black;          /* Define a cor de fundo */
+    color: var(--text-color);         /* Define a cor do texto */
+    display: flex;                    /* Exibe o conteúdo em uma linha flexível */
+    justify-content: center;          /* Centraliza o conteúdo */
+}
